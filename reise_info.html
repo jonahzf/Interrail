@@ -870,6 +870,15 @@ function updateCountdown() {
 }
 updateCountdown();
 setInterval(updateCountdown, 60000);
+
+// Force iOS Standalone Web App to auto-refresh on launch/focus
+if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+    document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === "visible") {
+            window.location.reload(true);
+        }
+    });
+}
 </script>
 </body>
 </html>

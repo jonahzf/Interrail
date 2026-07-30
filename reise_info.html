@@ -568,7 +568,7 @@
         }
     </style>
 </head>
-<body>
+<body id="app-body" data-version="2026-07-29T23:55:00">
 <div class="container">
 
     <!-- HERO -->
@@ -871,14 +871,32 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 60000);
 
-// Force iOS Standalone Web App to auto-refresh on launch/focus
-if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
-    document.addEventListener("visibilitychange", function() {
-        if (document.visibilityState === "visible") {
-            window.location.reload(true);
-        }
-    });
+// BULLETPROOF LIVE AUTO-UPDATER FOR iOS WEB APP
+function checkLiveServerUpdate() {
+    var cacheBuster = '?v=' + new Date().getTime();
+    fetch(window.location.pathname + cacheBuster, { cache: 'no-store' })
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            var serverVer = doc.body ? doc.body.getAttribute('data-version') : null;
+            var currentVer = document.body.getAttribute('data-version');
+            if (serverVer && serverVer !== currentVer) {
+                console.log('New update detected, refreshing live dashboard...');
+                window.location.reload(true);
+            }
+        })
+        .catch(function(e) { console.log(e); });
 }
+
+// Check every time app opens or comes into focus or every 15s
+document.addEventListener("DOMContentLoaded", checkLiveServerUpdate);
+document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState === "visible") {
+        checkLiveServerUpdate();
+    }
+});
+setInterval(checkLiveServerUpdate, 15000);
 </script>
 </body>
 </html>

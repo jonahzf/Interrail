@@ -897,6 +897,15 @@ document.addEventListener("visibilitychange", function() {
     }
 });
 setInterval(checkLiveServerUpdate, 15000);
+
+// Register Service Worker for PWA Network-First Updates
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').then(function(registration) {
+            registration.update();
+        });
+    });
+}
 </script>
 </body>
 </html>

@@ -11,6 +11,7 @@
 - Dauer: ca. 5 Wochen (~36 Tage)
 - Route (grob): Hamburg -> Balkan-Runde -> Hamburg
 - Transportmittel: Interrail & Busse
+- Live iPhone Web-App: https://superlative-salamander-4a2319.netlify.app/
 
 --------------------------------------------------------------------------------
 2. INTERRAIL-PASS & REISETAGE
@@ -125,8 +126,8 @@ DEINE DECKUNG / FIXKOSTEN PERSÖNLICH:
 - Hostel Wien (3N): 65,70 €
 - Hostel Bratislava (2N): 39,00 €
 - Regio Wien -> Bratislava (ca.): ~12,50 €
-- Ohrheld Ohrstöpsel (persönlich): ~50,00 €
-=> Deine Gesamtausgaben bisher: ~451,20 €
+- Ohrheld Ohrstöpsel (persönlich): 60,00 €
+=> Deine Gesamtausgaben bisher: ~461,20 €
 
 💸 SCHULDEN-TRACKER (AKTUELLES SPLID NETTO-GUTHABEN):
 - Hostel Wien: Du hast 131,40 € gezahlt -> Henri schuldet dir 65,70 €

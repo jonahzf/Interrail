@@ -121,13 +121,12 @@ GETEILTE AUSGABEN BISHER (SPLID):
 - Hostel Bratislava (2N): 78,00 € (von Henri gezahlt)
 => Geteilte Gesamtausgaben bisher: 777,40 € (388,70 € p.P.)
 
-DEINE DECKUNG / FIXKOSTEN PERSÖNLICH:
-- Interrail-Pass: 284,00 €
-- Hostel Wien (3N): 65,70 €
-- Hostel Bratislava (2N): 39,00 €
-- Regio Wien -> Bratislava (ca.): ~12,50 €
-- Ohrheld Ohrstöpsel (persönlich): 60,00 €
-=> Deine Gesamtausgaben bisher: ~461,20 €
+DEINE BEREITS GETÄTIGTEN AUSGABEN:
+- Interrail-Pass: 284,00 € (gezahlt)
+- Hostel Wien (deine Hälfte): 65,70 € (gezahlt)
+- Hostel Bratislava (deine Hälfte in Splid): 39,00 € (gezahlt)
+- Ohrheld Ohrstöpsel (persönlich): 60,00 € (gezahlt)
+=> Bisher getätigte Gesamtausgaben: 448,70 €
 
 💸 SCHULDEN-TRACKER (AKTUELLES SPLID NETTO-GUTHABEN):
 - Hostel Wien: Du hast 131,40 € gezahlt -> Henri schuldet dir 65,70 €

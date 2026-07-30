@@ -1,0 +1,199 @@
+================================================================================
+🚂 INTERRAIL REISE "HEJO" – SOMMER 2026
+================================================================================
+
+--------------------------------------------------------------------------------
+1. BASICS
+--------------------------------------------------------------------------------
+- Reisende: Du + Henri (bester Kumpel)
+- Startdatum: 05.08.2026 (Mittwoch)
+- Rückkehr: 10.09.2026 (Donnerstag morgens)
+- Dauer: ca. 5 Wochen (~36 Tage)
+- Route (grob): Hamburg -> Balkan-Runde -> Hamburg
+- Transportmittel: Interrail & Busse
+
+--------------------------------------------------------------------------------
+2. INTERRAIL-PASS & REISETAGE
+--------------------------------------------------------------------------------
+- Typ: Global Pass – 10 Reisetage innerhalb von 2 Monaten
+- Preis: 284 € pro Person (568 € gesamt für beide)
+- Balkan-Lücke (Bar -> Zagreb): Per Bus, da Interrail dort kaum nutzbar
+
+REISETAGE-KALKULATION (10 verfügbar, 9 verplant, 1 Reserve):
+#  Datum   Strecke                     Status
+1  05.08.  Hamburg -> Prag             [OK] sicher (bei Eli)
+2  07.08.  Prag -> Wien                [OK] sicher (Hostel gebucht)
+3  13.08.  Bratislava -> Budapest      geplant
+4  15.08.  Budapest -> Belgrad         geplant
+5  19.08.  Belgrad -> Bar              geplant
+6  02.09.  Zagreb -> Ljubljana         geplant
+7  06.09.  Trieste -> Verona           geplant
+8  09.09.  Verona -> Innsbruck         geplant
+9  10.09.  Innsbruck -> Hamburg        geplant (Nachtzug)
+-- Verbleibend: 1 Reisetag Puffer --
+
+WICHTIG (Nachtzug-Regel):
+Der Nachtzug Innsbruck -> Hamburg fährt am 09.09. um 20:46 ab (nach 19:00!).
+Er zählt erst als Reisetag am 10.09. (Ankunftstag). Daher brauchen Verona -> Innsbruck
+und Innsbruck -> Hamburg 2 separate Reisetage (09.09. + 10.09.).
+
+--------------------------------------------------------------------------------
+3. ZUGVERBINDUNGEN
+--------------------------------------------------------------------------------
+#  Datum       Strecke                                 Zeiten          Dauer   Umst. Res.        Preis
+1  Mi, 05.08.  Hamburg Hbf -> Praha-Holesovice         08:34 -> 15:15  6h 41m  1     empfohlen   -
+2  Do, 07.08.  Praha-Holesovice -> Wien Hbf            Verbindung neu raussuchen
+3  Do, 13.08.  Bratislava-Petrzalka -> Kelenföld       08:49 -> 11:02  2h 13m  1     optional    -
+4  Sa, 15.08.  Kőbánya-Kispest -> Beograd Centar       09:06 -> 15:19  6h 13m  2     erforderl.  ab 6 €
+5  Mi, 19.08.  Beograd Centar -> Bar (Montenegro)      09:45 -> 21:10  11h 25m 0     erforderl.  -
+6  Mi, 02.09.  Zagreb Glavni Kol. -> Ljubljana         08:40 -> 11:03  2h 23m  0     optional    -
+7  So, 06.09.  Trieste Centrale -> Verona Porta Nuova  09:39 -> 12:30  2h 51m  0     erforderl.  ab 15 €
+8  Mi, 09.09.  Verona Porta Nuova -> Innsbruck Hbf     07:50 -> 12:13  4h 23m  1     -           -
+9  Mi, 09.09.  Innsbruck Hbf -> Hamburg Hbf            20:46 -> 08:38  11h 52m 0     erforderl.  variabel
+
+HINWEIS Wien -> Bratislava:
+Per Regionalbahn (kein Interrail-Reisetag!). Fährt regelmäßig, dauert ~1h, kostet ca. 10-15 € p.P.
+
+--------------------------------------------------------------------------------
+4. AUFENTHALTE & ROUTEN-PLANUNG
+--------------------------------------------------------------------------------
+Stadt             Ankunft        Abfahrt        Nächte  Status
+--------------------------------------------------------------------------------
+🇨🇿 Prag           05.08. (15:15) 07.08.         2       [OK] sicher (bei Eli)
+🇦🇹 Wien           07.08.         10.08. (Check) 3       [OK] gebucht (Hostel)
+🇸🇰 Bratislava     10.08.         12.08. (Check) 2       [OK] gebucht (Hostel)
+🇭🇺 Budapest       12.08.         15.08. (09:06) ~3      vorläufig
+🇷🇸 Belgrad        15.08. (15:19) 19.08. (09:45) ~4      vorläufig
+🇲🇪 Bar            19.08. (21:10) ~20.08.        1       vorläufig (Bus-Runde)
+🇦🇱 Shkodra        ~20.08.        ~22.08.        2       vorläufig (+ Bergwanderung)
+🇲🇪 Ulcinj         ~22.08.        ~23.08.        1       vorläufig (Strand)
+🇲🇪 Bar (2x)       ~23.08.        ~24.08.        1       vorläufig
+🇭🇷 Dubrovnik      ~24.08.        ~26.08.        2       vorläufig
+🇧🇦 Sarajevo       ~26.08.        ~30.08.        4       vorläufig
+🇭🇷 Zagreb         ~30.08.        02.09. (08:40) 3       vorläufig
+🇸🇮 Ljubljana      02.09. (11:03) ~06.09.        4       vorläufig
+🇮🇹 Trieste        ~05./06.09.    06.09. (09:39) ~1      vorläufig
+🇮🇹 Verona         06.09. (12:30) 09.09. (07:50) ~3      vorläufig
+🇦🇹 Innsbruck      09.09. (12:13) 09.09. (20:46) Durchr.  vorläufig
+🇩🇪 Hamburg        10.09. (08:38) -              Zuhause!
+
+BALKAN-BUS-ROUTE (19.08. - 02.09.):
+Bar 🇲🇪 -> Shkodra 🇦🇱 -> Ulcinj 🇲🇪 -> Bar 🇲🇪 -> Dubrovnik 🇭🇷 -> Sarajevo 🇧🇦 -> Zagreb 🇭🇷
+
+--------------------------------------------------------------------------------
+5. UNTERKÜNFTE
+--------------------------------------------------------------------------------
+[GEBUCHT / SICHER]
+- Bratislava: Hostelworld Buchung (Ref: 10394-578698657)
+  * Check-in: Mo 10.08.2026 | Check-out: Mi 12.08.2026 (2 Nächte)
+  * Zimmer: 2x Bett im Standard 10-Bett Mixed Dorm
+  * Preis in Splid: 78,00 € (Henri hat bezahlt → 39,00 € p.P.)
+  * (Hostelworld Gesamt inkl. Tax 92,00 € · 11,70 € Anzahlung online)
+- Wien: Westend City Hostel
+  * Buchung: 1060-20-22177
+  * Adresse: Fügergasse 3, 1060 Wien (Tel: +43/1/597 67 29)
+  * Check-in: Fr 07.08.2026 | Check-out: Mo 10.08.2026 (3 Nächte)
+  * Zimmer: 2x Bett im 8-Bett-Zimmer mit Dusche+WC
+  * Preis in Splid: 131,40 € (Du hast bezahlt → 65,70 € p.P.)
+- Prag: Bei Eli (CISV-Freundin von Henri)
+  * 05.08. - 07.08. (2 Nächte) | Kostenlos 🎉
+
+[NOCH OFFEN]
+- Budapest (12.-15.08. / 3 Nächte)
+- Belgrad (15.-19.08. / 4 Nächte)
+- Bar (19.-20.08. / 1 Nacht)
+- Shkodra (~20.-22.08. / 2 Nächte)
+- Ulcinj (~22.-23.08. / 1 Nacht)
+- Bar 2x (~23.-24.08. / 1 Nacht)
+- Dubrovnik (~24.-26.08. / 2 Nächte)
+- Sarajevo (~26.-30.08. / 4 Nächte)
+- Zagreb (~30.08.-02.09. / 3 Nächte)
+- Ljubljana (02.-06.09. / 4 Nächte)
+- Verona (06.-09.09. / 3 Nächte)
+
+--------------------------------------------------------------------------------
+6. BUDGET & SCHULDEN-TRACKER (SPLID APP SYNCHRON)
+--------------------------------------------------------------------------------
+GETEILTE AUSGABEN BISHER (SPLID):
+- 2x Interrail-Pässe: 568,00 € (je 284,00 €)
+- Hostel Wien (3N): 131,40 € (von dir gezahlt)
+- Hostel Bratislava (2N): 78,00 € (von Henri gezahlt)
+=> Geteilte Gesamtausgaben bisher: 777,40 € (388,70 € p.P.)
+
+DEINE DECKUNG / FIXKOSTEN PERSÖNLICH:
+- Interrail-Pass: 284,00 €
+- Hostel Wien (3N): 65,70 €
+- Hostel Bratislava (2N): 39,00 €
+- Regio Wien -> Bratislava (ca.): ~12,50 €
+- Ohrheld Ohrstöpsel (persönlich): ~50,00 €
+=> Deine Gesamtausgaben bisher: ~451,20 €
+
+💸 SCHULDEN-TRACKER (AKTUELLES SPLID NETTO-GUTHABEN):
+- Hostel Wien: Du hast 131,40 € gezahlt -> Henri schuldet dir 65,70 €
+- Hostel Bratislava: Henri hat 78,00 € gezahlt -> Du schuldest Henri 39,00 €
+================================================================================
+=> NETTO-STAND: HENRI SCHULDET DIR 26,70 € 🟢
+================================================================================
+
+--------------------------------------------------------------------------------
+7. PACKLISTE (70L RUCKSACK - GO LIGHT)
+--------------------------------------------------------------------------------
+Tipp: Rucksack nur zu 60-70% füllen (11-13 kg max). Packing Cubes nutzen!
+
+[ ] DOKUMENTE & FINANZEN:
+    - Reisepass (MUSS! Mind. 3 Monate gültig für Nicht-EU Balkan)
+    - Personalausweis (Backup)
+    - Interrail Pass (App + ausgedruckter QR-Code)
+    - Krankenkassenkarte / Auslandskrankenversicherung
+    - 2x Kreditkarten (z.B. Revolut / N26 getrennt aufbewahren)
+    - Bargeld Euro (Montenegro = Euro, Rest leicht umtauschbar)
+    - Studentenausweis
+
+[ ] KLEIDUNG (für 7-8 Tage):
+    - 7x T-Shirts / Tanktops
+    - 1x Schickeres Shirt / Hemd (Ausgehen Belgrad/Sarajevo)
+    - 2x Kurze Hosen / Shorts
+    - 1x Badehose
+    - 1x Dünne lange Hose (für Moscheen/Kirchen & kühle Nächte)
+    - 1x Regenjacke / Windbreaker (für Shkodra-Wanderung!)
+    - 1x Pullover / Hoodie (Züge & Nachtzug)
+    - 7x Unterwäsche & Socken (1-2x Wandersocken)
+
+[ ] SCHUHE:
+    - 1x Bequeme Sneaker / Laufschuhe
+    - 1x Feste Schuhe / Trailrunner (Profil für Shkodra-Bergwanderung!)
+    - 1x Adiletten / Badeschlappen (Hostel-Duschen & Strand)
+
+[ ] HYGIENE & GESUNDHEIT:
+    - Mikrofaser-Handtuch (schnelltrocknend)
+    - Kulturbeutel zum Aufhängen
+    - Duschgel / Shampoo (100ml Flaschen)
+    - Zahnbürste & Zahnpasta
+    - Sonnencreme & Mückenschutz
+    - kleine Reiseapotheke: IBU, Vomex (Kurven-Busse!), Pflaster, Blasenpflaster
+
+[ ] GADGETS & HOSTEL-EQUIPMENT:
+    - Kleines Zahlenschloss (für Wertsachen-Locker)
+    - Oropax / Ohrstöpsel + Schlafmaske (Dorms & Nachtzug)
+    - Tagesrucksack 15-20L (Städtetrip & Shkodra-Wanderung)
+    - Powerbank 10.000-20.000 mAh
+    - Ladekabel & ggf. Mehrfachstecker
+    - Wäscheleine + Rei in der Tube (Handwäsche)
+    - Trinkflasche (mind. 1 Liter)
+    - 🎁 Gastgeschenk für Eli & ihre Eltern (Prag)
+
+--------------------------------------------------------------------------------
+8. TO-DO VOR REISEBEGINN
+--------------------------------------------------------------------------------
+[ ] 🎁 Gastgeschenk für Eli + Eltern besorgen
+[ ] Sitzplatzreservierungen buchen (Budapest->Belgrad, Belgrad->Bar, Trieste->Verona, Nachtzug Innsbruck->Hamburg)
+[ ] Neue Zugverbindung Prag -> Wien für den 07.08. raussuchen
+[ ] 🖨️ 3D-Drucken: Kontaktlinsen-Etui
+[x] 🎧 Ohrheld Ohrstöpsel bestellt! (~50€, ohrheld.com) -> Lieferung vor 05.08. abwarten
+    Backup: Ohropax Silicon aus Apotheke/DM mitnehmen (~7€) falls nicht rechtzeitig
+
+--------------------------------------------------------------------------------
+9. PERSÖNLICHES
+--------------------------------------------------------------------------------
+- Apple-Nutzer (iPhone mit Face-ID, MacBook etc.)
+- Rucksack: Gregory 65L + Packing Cubes vorhanden

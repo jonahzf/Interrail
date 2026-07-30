@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚂 Interrail Hejo – Sommer 2026</title>
+    <!-- Apple Web-App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Interrail">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚂</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: #111827;
+            --bg-card-hover: #1a2332;
+            --border: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --accent-cyan: #06b6d4;
+            --accent-orange: #f97316;
+            --gradient-hero: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1a1a2e 100%);
+            --gradient-card: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.05) 100%);
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+            --shadow-glow: 0 0 30px rgba(59,130,246,0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 20px 80px;
+        }
+
+        /* === HERO === */
+        .hero {
+            background: var(--gradient-hero);
+            border-radius: 20px;
+            padding: 48px 40px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(59,130,246,0.2);
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-sub {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stat-value {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+        .hero-stat-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* === SECTIONS === */
+        .section {
+            margin-bottom: 28px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .section-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* === CARDS === */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 12px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(59,130,246,0.3);
+        }
+
+        /* === ROUTE TIMELINE === */
+        .route-timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        .route-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), var(--accent-emerald), var(--accent-amber), var(--accent-rose), var(--accent-cyan));
+            border-radius: 2px;
+        }
+        .route-stop {
+            position: relative;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+        .route-stop:hover { background: rgba(255,255,255,0.03); }
+        .route-dot {
+            position: absolute;
+            left: -30px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid;
+            background: var(--bg-primary);
+        }
+        .route-dot.confirmed { background: var(--accent-emerald); border-color: var(--accent-emerald); }
+        .route-dot.booked { background: var(--accent-blue); border-color: var(--accent-blue); }
+        .route-dot.planned { border-color: var(--text-muted); }
+        .route-flag { font-size: 22px; flex-shrink: 0; }
+        .route-info { flex: 1; }
+        .route-city {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .route-dates {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        .route-nights {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-green { background: rgba(16,185,129,0.15); color: var(--accent-emerald); }
+        .badge-blue { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
+        .badge-yellow { background: rgba(245,158,11,0.15); color: var(--accent-amber); }
+        .badge-red { background: rgba(244,63,94,0.15); color: var(--accent-rose); }
+        .badge-purple { background: rgba(139,92,246,0.15); color: var(--accent-purple); }
+
+        /* === TRAIN TABLE === */
+        .train-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 13px;
+        }
+        .train-table thead th {
+            text-align: left;
+            padding: 10px 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+        }
+        .train-table tbody tr {
+            transition: background 0.15s;
+        }
+        .train-table tbody tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+        .train-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(30,41,59,0.5);
+            vertical-align: middle;
+        }
+        .train-route {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .train-time {
+            font-family: 'SF Mono', 'Menlo', monospace;
+            font-size: 13px;
+            color: var(--accent-cyan);
+        }
+
+        /* === TRAVEL DAYS PROGRESS === */
+        .travel-days-bar {
+            display: flex;
+            gap: 4px;
+            margin: 16px 0;
+        }
+        .travel-day-block {
+            flex: 1;
+            height: 36px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            transition: transform 0.2s;
+            cursor: default;
+            position: relative;
+        }
+        .travel-day-block:hover {
+            transform: scaleY(1.15);
+        }
+        .travel-day-block.used-confirmed {
+            background: linear-gradient(135deg, var(--accent-emerald), #059669);
+            color: white;
+        }
+        .travel-day-block.used-planned {
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: white;
+        }
+        .travel-day-block.reserve {
+            background: rgba(245,158,11,0.2);
+            border: 1px dashed var(--accent-amber);
+            color: var(--accent-amber);
+        }
+        .travel-day-legend {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        .legend-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        /* === BUDGET === */
+        .budget-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .budget-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+        }
+        .budget-card-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        .budget-amount {
+            font-size: 32px;
+            font-weight: 800;
+        }
+        .budget-items {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .budget-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .budget-item-amount {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .debt-card {
+            background: linear-gradient(135deg, rgba(244,63,94,0.1), rgba(244,63,94,0.03));
+            border: 1px solid rgba(244,63,94,0.25);
+        }
+        .debt-amount {
+            color: var(--accent-rose);
+        }
+
+        /* === ACCOMMODATION === */
+        .accom-card {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .accom-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .accom-icon.booked { background: rgba(59,130,246,0.15); }
+        .accom-icon.free { background: rgba(16,185,129,0.15); }
+        .accom-details { flex: 1; }
+        .accom-name {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+        .accom-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .accom-price {
+            font-weight: 700;
+            font-size: 18px;
+            text-align: right;
+        }
+        .accom-open-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        .accom-open-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 13px;
+        }
+        .accom-open-city {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .accom-open-dates {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        /* === PACKLISTE === */
+        .pack-category {
+            margin-bottom: 20px;
+        }
+        .pack-category-header {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pack-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 6px;
+        }
+        .pack-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            transition: background 0.15s;
+        }
+        .pack-item:hover { background: rgba(255,255,255,0.03); }
+        .pack-check {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--text-muted);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .pack-check.checked {
+            background: var(--accent-emerald);
+            border-color: var(--accent-emerald);
+        }
+        .pack-item.important { color: var(--accent-amber); font-weight: 500; }
+
+        /* === TODO === */
+        .todo-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            margin-bottom: 6px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .todo-item:hover { background: rgba(255,255,255,0.04); }
+        .todo-check {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--text-muted);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .todo-check.done {
+            background: var(--accent-emerald);
+            border-color: var(--accent-emerald);
+        }
+        .todo-check.done::after {
+            content: '✓';
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .todo-item.done { opacity: 0.5; text-decoration: line-through; }
+
+        /* === ALERT BOX === */
+        .alert {
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .alert-warn {
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.25);
+            color: var(--accent-amber);
+        }
+        .alert-info {
+            background: rgba(59,130,246,0.1);
+            border: 1px solid rgba(59,130,246,0.25);
+            color: var(--accent-blue);
+        }
+
+        /* === BALKAN ROUTE VISUAL === */
+        .balkan-route {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            padding: 20px 0;
+            overflow-x: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .balkan-stop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 12px;
+        }
+        .balkan-flag { font-size: 28px; }
+        .balkan-city {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 4px;
+            white-space: nowrap;
+        }
+        .balkan-arrow {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin: 0 2px;
+        }
+
+        .countdown {
+            font-size: 14px;
+            color: var(--accent-amber);
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .hero { padding: 32px 24px; }
+            .hero h1 { font-size: 26px; }
+            .hero-stats { gap: 20px; }
+            .budget-grid { grid-template-columns: 1fr; }
+            .pack-items { grid-template-columns: 1fr; }
+            .accom-open-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-label">Interrail Sommer 2026</div>
+        <h1>🚂 Reise „Hejo"</h1>
+        <div class="hero-sub">Du & Henri · Hamburg → Balkan → Hamburg</div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-value">36</span>
+                <span class="hero-stat-label">Tage</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-value">17</span>
+                <span class="hero-stat-label">Städte</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-value">9</span>
+                <span class="hero-stat-label">Länder</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-value" id="countdown"></span>
+                <span class="hero-stat-label">Tage noch</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- REISETAGE -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(59,130,246,0.15)">🎟️</div>
+            <div>
+                <div class="section-title">Interrail-Pass</div>
+                <div class="section-subtitle">Global Pass · 10 Reisetage / 2 Monate · 284 € p.P.</div>
+            </div>
+        </div>
+        <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <span style="font-weight:700">Reisetage: 9 von 10 verbraucht</span>
+                <span class="badge badge-green">1 Reserve</span>
+            </div>
+            <div class="travel-days-bar">
+                <div class="travel-day-block used-confirmed" title="05.08. Hamburg→Prag ✅">1</div>
+                <div class="travel-day-block used-confirmed" title="07.08. Prag→Wien ✅">2</div>
+                <div class="travel-day-block used-planned" title="13.08. Bratislava→Budapest">3</div>
+                <div class="travel-day-block used-planned" title="15.08. Budapest→Belgrad">4</div>
+                <div class="travel-day-block used-planned" title="19.08. Belgrad→Bar">5</div>
+                <div class="travel-day-block used-planned" title="02.09. Zagreb→Ljubljana">6</div>
+                <div class="travel-day-block used-planned" title="06.09. Trieste→Verona">7</div>
+                <div class="travel-day-block used-planned" title="09.09. Verona→Innsbruck">8</div>
+                <div class="travel-day-block used-planned" title="10.09. Nachtzug→Hamburg">9</div>
+                <div class="travel-day-block reserve" title="1 Reserve-Tag">⏳</div>
+            </div>
+            <div class="travel-day-legend">
+                <span><span class="legend-dot" style="background:var(--accent-emerald)"></span> Sicher</span>
+                <span><span class="legend-dot" style="background:var(--accent-blue)"></span> Geplant</span>
+                <span><span class="legend-dot" style="background:rgba(245,158,11,0.4);border:1px dashed var(--accent-amber)"></span> Reserve</span>
+            </div>
+            <div class="alert alert-info" style="margin-top:16px">
+                <span>⚡</span>
+                <span><strong>Nachtzug-Regel:</strong> Innsbruck→Hamburg (Abfahrt 20:46 am 09.09.) zählt als Reisetag am <strong>10.09.</strong> (Ankunftstag).</span>
+            </div>
+            <div class="alert alert-info">
+                <span>🚈</span>
+                <span><strong>Wien→Bratislava:</strong> Per Regionalbahn (~1h, ~10–15 € p.P.) – kein Reisetag nötig!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ZUGVERBINDUNGEN -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(6,182,212,0.15)">🚆</div>
+            <div>
+                <div class="section-title">Zugverbindungen</div>
+                <div class="section-subtitle">9 Fahrten geplant</div>
+            </div>
+        </div>
+        <div class="card" style="overflow-x:auto;padding:12px">
+            <table class="train-table">
+                <thead><tr><th>#</th><th>Datum</th><th>Strecke</th><th>Zeiten</th><th>Dauer</th><th>Reservierung</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Mi, 05.08.</td><td class="train-route">Hamburg Hbf → Praha-Holesovice</td><td class="train-time">08:34 → 15:15</td><td>6h 41m</td><td><span class="badge badge-yellow">empfohlen</span></td></tr>
+                    <tr><td>2</td><td>Do, 07.08.</td><td class="train-route">Praha → Wien Hbf</td><td class="train-time" style="color:var(--accent-amber)">noch anpassen</td><td>–</td><td>–</td></tr>
+                    <tr><td>3</td><td>Mi, 12.08.</td><td class="train-route">Bratislava → Budapest-Kelenföld</td><td class="train-time">08:49 → 11:02</td><td>2h 13m</td><td><span class="badge badge-blue">optional</span></td></tr>
+                    <tr><td>4</td><td>Sa, 15.08.</td><td class="train-route">Budapest → Beograd Centar</td><td class="train-time">09:06 → 15:19</td><td>6h 13m</td><td><span class="badge badge-red">erforderlich · ab 6 €</span></td></tr>
+                    <tr><td>5</td><td>Mi, 19.08.</td><td class="train-route">Beograd → Bar (Montenegro)</td><td class="train-time">09:45 → 21:10</td><td>11h 25m</td><td><span class="badge badge-red">erforderlich</span></td></tr>
+                    <tr><td>6</td><td>Mi, 02.09.</td><td class="train-route">Zagreb → Ljubljana</td><td class="train-time">08:40 → 11:03</td><td>2h 23m</td><td><span class="badge badge-blue">optional</span></td></tr>
+                    <tr><td>7</td><td>So, 06.09.</td><td class="train-route">Trieste → Verona Porta Nuova</td><td class="train-time">09:39 → 12:30</td><td>2h 51m</td><td><span class="badge badge-red">erforderlich · ab 15 €</span></td></tr>
+                    <tr><td>8</td><td>Mi, 09.09.</td><td class="train-route">Verona → Innsbruck Hbf</td><td class="train-time">07:50 → 12:13</td><td>4h 23m</td><td>–</td></tr>
+                    <tr><td>9</td><td>Mi, 09.09.</td><td class="train-route">Innsbruck Hbf → Hamburg Hbf 🌙</td><td class="train-time">20:46 → 08:38+1</td><td>11h 52m</td><td><span class="badge badge-red">erforderlich · variabel</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ROUTE & AUFENTHALTE -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(139,92,246,0.15)">🗺️</div>
+            <div>
+                <div class="section-title">Route & Aufenthalte</div>
+                <div class="section-subtitle">17 Stopps · 36 Tage</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="route-timeline">
+                <div class="route-stop"><div class="route-dot confirmed"></div><span class="route-flag">🇨🇿</span><div class="route-info"><div class="route-city">Prag</div><div class="route-dates">05.08. → 07.08.</div></div><span class="route-nights">2N</span><span class="badge badge-green">bei Eli</span></div>
+                <div class="route-stop"><div class="route-dot booked"></div><span class="route-flag">🇦🇹</span><div class="route-info"><div class="route-city">Wien</div><div class="route-dates">07.08. → 10.08.</div></div><span class="route-nights">3N</span><span class="badge badge-blue">Hostel</span></div>
+                <div class="route-stop"><div class="route-dot booked"></div><span class="route-flag">🇸🇰</span><div class="route-info"><div class="route-city">Bratislava</div><div class="route-dates">10.08. → 12.08.</div></div><span class="route-nights">2N</span><span class="badge badge-blue">Hostel</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇭🇺</span><div class="route-info"><div class="route-city">Budapest</div><div class="route-dates">12.08. → 15.08.</div></div><span class="route-nights">~3N</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇷🇸</span><div class="route-info"><div class="route-city">Belgrad</div><div class="route-dates">15.08. → 19.08.</div></div><span class="route-nights">~4N</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇲🇪</span><div class="route-info"><div class="route-city">Bar</div><div class="route-dates">19.08. → ~20.08.</div></div><span class="route-nights">1N</span><span class="badge badge-purple">Bus</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇦🇱</span><div class="route-info"><div class="route-city">Shkodra</div><div class="route-dates">~20.08. → ~22.08.</div></div><span class="route-nights">2N</span><span class="badge badge-purple">🥾 Bergwanderung</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇲🇪</span><div class="route-info"><div class="route-city">Ulcinj</div><div class="route-dates">~22.08. → ~23.08.</div></div><span class="route-nights">1N</span><span class="badge badge-purple">🏖️ Strand</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇲🇪</span><div class="route-info"><div class="route-city">Bar (2×)</div><div class="route-dates">~23.08. → ~24.08.</div></div><span class="route-nights">1N</span><span class="badge badge-purple">Bus</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇭🇷</span><div class="route-info"><div class="route-city">Dubrovnik</div><div class="route-dates">~24.08. → ~26.08.</div></div><span class="route-nights">2N</span><span class="badge badge-purple">Bus</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇧🇦</span><div class="route-info"><div class="route-city">Sarajevo</div><div class="route-dates">~26.08. → ~30.08.</div></div><span class="route-nights">4N</span><span class="badge badge-purple">Bus</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇭🇷</span><div class="route-info"><div class="route-city">Zagreb</div><div class="route-dates">~30.08. → 02.09.</div></div><span class="route-nights">3N</span><span class="badge badge-purple">Bus</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇸🇮</span><div class="route-info"><div class="route-city">Ljubljana</div><div class="route-dates">02.09. → ~06.09.</div></div><span class="route-nights">4N</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇮🇹</span><div class="route-info"><div class="route-city">Trieste</div><div class="route-dates">~05./06.09.</div></div><span class="route-nights">~1N</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇮🇹</span><div class="route-info"><div class="route-city">Verona</div><div class="route-dates">06.09. → 09.09.</div></div><span class="route-nights">~3N</span></div>
+                <div class="route-stop"><div class="route-dot planned"></div><span class="route-flag">🇦🇹</span><div class="route-info"><div class="route-city">Innsbruck</div><div class="route-dates">09.09.</div></div><span class="route-nights">Durchreise</span></div>
+                <div class="route-stop"><div class="route-dot confirmed"></div><span class="route-flag">🇩🇪</span><div class="route-info"><div class="route-city">Hamburg</div><div class="route-dates">10.09. 🏠</div></div><span class="route-nights">Zuhause!</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BALKAN BUS-ROUTE -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(249,115,22,0.15)">🚌</div>
+            <div>
+                <div class="section-title">Balkan Bus-Route</div>
+                <div class="section-subtitle">19.08. – 02.09. · 14 Tage · alles per Bus</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="balkan-route">
+                <div class="balkan-stop"><span class="balkan-flag">🇲🇪</span><span class="balkan-city">Bar</span></div>
+                <span class="balkan-arrow">→</span>
+                <div class="balkan-stop"><span class="balkan-flag">🇦🇱</span><span class="balkan-city">Shkodra</span></div>
+                <span class="balkan-arrow">→</span>
+                <div class="balkan-stop"><span class="balkan-flag">🇲🇪</span><span class="balkan-city">Ulcinj</span></div>
+                <span class="balkan-arrow">→</span>
+                <div class="balkan-stop"><span class="balkan-flag">🇲🇪</span><span class="balkan-city">Bar</span></div>
+                <span class="balkan-arrow">→</span>
+                <div class="balkan-stop"><span class="balkan-flag">🇭🇷</span><span class="balkan-city">Dubrovnik</span></div>
+                <span class="balkan-arrow">→</span>
+                <div class="balkan-stop"><span class="balkan-flag">🇧🇦</span><span class="balkan-city">Sarajevo</span></div>
+                <span class="balkan-arrow">→</span>
+                <div class="balkan-stop"><span class="balkan-flag">🇭🇷</span><span class="balkan-city">Zagreb</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BUDGET -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(16,185,129,0.15)">💰</div>
+            <div>
+                <div class="section-title">Budget & Finanzen</div>
+                <div class="section-subtitle">Synchron mit Splid-App („Interrail")</div>
+            </div>
+        </div>
+        <div class="budget-grid">
+            <div class="budget-card">
+                <div class="budget-card-title">Deine Kosten (persönlich)</div>
+                <div class="budget-amount" style="color:var(--accent-emerald)">~451,20 €</div>
+                <div class="budget-items">
+                    <div class="budget-item"><span>Interrail-Pass</span><span class="budget-item-amount">284,00 €</span></div>
+                    <div class="budget-item"><span>Hostel Wien (Hälfte)</span><span class="budget-item-amount">65,70 €</span></div>
+                    <div class="budget-item"><span>Hostel Bratislava (Hälfte)</span><span class="budget-item-amount">39,00 €</span></div>
+                    <div class="budget-item"><span>Regio Wien→Bratislava</span><span class="budget-item-amount">~12,50 €</span></div>
+                    <div class="budget-item"><span>Ohrheld Ohrstöpsel</span><span class="budget-item-amount">~50,00 €</span></div>
+                </div>
+            </div>
+            <div class="budget-card">
+                <div class="budget-card-title">Geteilte Gesamtausgaben (beide)</div>
+                <div class="budget-amount" style="color:var(--accent-blue)">777,40 €</div>
+                <div class="budget-items">
+                    <div class="budget-item"><span>2× Interrail-Pass</span><span class="budget-item-amount">568,00 €</span></div>
+                    <div class="budget-item"><span>Hostel Wien (Du gezahlt)</span><span class="budget-item-amount">131,40 €</span></div>
+                    <div class="budget-item"><span>Hostel Bratislava (Henri gezahlt)</span><span class="budget-item-amount">78,00 €</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="budget-card debt-card" style="margin-top:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                    <div class="budget-card-title">💸 Schulden-Tracker (Splid Netto-Saldo)</div>
+                    <div style="font-size:14px;color:var(--text-secondary)">Du hast Wien (131,40 €) gezahlt · Henri hat Bratislava (78,00 €) gezahlt</div>
+                    <div style="font-size:12px;color:var(--accent-emerald);margin-top:4px;font-weight:600">🟢 Henri schuldet dir netto 26,70 €</div>
+                </div>
+                <div class="budget-amount debt-amount" style="color:var(--accent-emerald)">+26,70 €</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNTERKÜNFTE -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(245,158,11,0.15)">🏨</div>
+            <div>
+                <div class="section-title">Unterkünfte</div>
+                <div class="section-subtitle">3 gesichert · 11 offen</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="accom-card">
+                <div class="accom-icon booked">🇸🇰</div>
+                <div class="accom-details">
+                    <div class="accom-name">Hostelworld Buchung · Bratislava</div>
+                    <div class="accom-meta">Buchungsnummer: 10394-578698657</div>
+                    <div class="accom-meta">Mo 10.08. → Mi 12.08. · 2 Nächte · 2× Bett im 10-Bett Mixed Dorm</div>
+                    <div class="accom-meta" style="margin-top:4px;color:var(--text-muted)">💳 11,70 € Anzahlung online bezahlt · 80,30 € vor Ort im Hostel</div>
+                </div>
+                <div class="accom-price" style="color:var(--accent-blue)">46,00 € p.P.</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="accom-card">
+                <div class="accom-icon booked">🇦🇹</div>
+                <div class="accom-details">
+                    <div class="accom-name">Westend City Hostel Wien</div>
+                    <div class="accom-meta">Fügergasse 3, 1060 Wien · Buchung: 1060-20-22177</div>
+                    <div class="accom-meta">Fr 07.08. → Mo 10.08. · 3 Nächte · 2× Bett im 8-Bett-Zimmer</div>
+                    <div class="accom-meta" style="margin-top:4px;color:var(--text-muted)">📞 +43/1/597 67 29 · ✉️ info@westendhostel.at</div>
+                </div>
+                <div class="accom-price" style="color:var(--accent-blue)">32,85 € p.P.</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="accom-card">
+                <div class="accom-icon free">🇨🇿</div>
+                <div class="accom-details">
+                    <div class="accom-name">Bei Eli · Prag</div>
+                    <div class="accom-meta">CISV-Freundin von Henri · 05.08. → 07.08. · 2 Nächte</div>
+                </div>
+                <div class="accom-price" style="color:var(--accent-emerald)">Gratis 🎉</div>
+            </div>
+        </div>
+        <div style="margin-top:16px">
+            <div style="font-weight:700;font-size:15px;margin-bottom:12px;color:var(--text-muted)">🔲 Noch offen</div>
+            <div class="accom-open-grid">
+                <div class="accom-open-item"><div class="accom-open-city">🇭🇺 Budapest</div><div class="accom-open-dates">12.–15.08. · 3N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇷🇸 Belgrad</div><div class="accom-open-dates">15.–19.08. · 4N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇲🇪 Bar</div><div class="accom-open-dates">19.–20.08. · 1N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇦🇱 Shkodra</div><div class="accom-open-dates">~20.–22.08. · 2N 🥾</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇲🇪 Ulcinj</div><div class="accom-open-dates">~22.–23.08. · 1N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇲🇪 Bar 2×</div><div class="accom-open-dates">~23.–24.08. · 1N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇭🇷 Dubrovnik</div><div class="accom-open-dates">~24.–26.08. · 2N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇧🇦 Sarajevo</div><div class="accom-open-dates">~26.–30.08. · 4N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇭🇷 Zagreb</div><div class="accom-open-dates">~30.08.–02.09. · 3N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇸🇮 Ljubljana</div><div class="accom-open-dates">02.–06.09. · 4N</div></div>
+                <div class="accom-open-item"><div class="accom-open-city">🇮🇹 Verona</div><div class="accom-open-dates">06.–09.09. · 3N</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TODO -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(244,63,94,0.15)">📋</div>
+            <div>
+                <div class="section-title">To-Do vor Reisebeginn</div>
+            </div>
+        </div>
+        <div class="todo-item"><div class="todo-check"></div><span>🎁 Gastgeschenk für Eli + ihre Eltern besorgen</span></div>
+        <div class="todo-item"><div class="todo-check"></div><span>Sitzplatzreservierungen buchen (Budapest→Belgrad, Belgrad→Bar, Trieste→Verona, Nachtzug Innsbruck→Hamburg)</span></div>
+        <div class="todo-item"><div class="todo-check"></div><span>Neue Zugverbindung Prag → Wien für den 07.08. raussuchen</span></div>
+        <div class="todo-item"><div class="todo-check"></div><span>🖨️ 3D-Drucken: Kontaktlinsen-Etui</span></div>
+        <div class="todo-item done"><div class="todo-check done"></div><span>🎧 Ohrheld Ohrstöpsel bestellen (~50 €)</span></div>
+    </div>
+
+    <!-- PERSÖNLICHES -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:rgba(139,92,246,0.15)">👤</div>
+            <div>
+                <div class="section-title">Persönliches</div>
+            </div>
+        </div>
+        <div class="card" style="display:flex;gap:24px;flex-wrap:wrap">
+            <div>🍎 Apple-Nutzer (iPhone, MacBook)</div>
+            <div>🎒 Gregory 65L + Packing Cubes</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Countdown
+const departure = new Date('2026-08-05T08:34:00');
+function updateCountdown() {
+    const now = new Date();
+    const diff = Math.ceil((departure - now) / (1000 * 60 * 60 * 24));
+    document.getElementById('countdown').textContent = diff > 0 ? diff : '🚀';
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+</script>
+</body>
+</html>

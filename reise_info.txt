@@ -119,22 +119,23 @@ GETEILTE AUSGABEN BISHER (SPLID):
 - 2x Interrail-Pässe: 568,00 € (je 284,00 €)
 - Hostel Wien (3N): 131,40 € (von dir gezahlt)
 - Hostel Bratislava (2N): 78,00 € (von Henri gezahlt)
-=> Geteilte Gesamtausgaben bisher: 777,40 € (388,70 € p.P.)
+- Gastgeschenk Franzi Likör (Prag): 17,95 € (von dir gezahlt)
+=> Geteilte Gesamtausgaben bisher: 795,35 € (397,68 € p.P.)
 
-DEINE BEREITS GETÄTIGTEN AUSGABEN:
-- Interrail-Pass: 284,00 € (gezahlt)
-- Hostel Wien (deine Hälfte): 65,70 € (gezahlt)
-- Hostel Bratislava (deine Hälfte in Splid): 39,00 € (gezahlt)
-- Ohrheld Ohrstöpsel (persönlich): 60,00 € (gezahlt)
-- Gastgeschenk Franzi Likör (Prag): 17,95 € (gezahlt)
-=> Bisher getätigte Gesamtausgaben: 466,65 €
+DEINE ANTEILIGEN GETÄTIGTEN AUSGABEN:
+- Interrail-Pass: 284,00 €
+- Hostel Wien (deine Hälfte): 65,70 €
+- Hostel Bratislava (deine Hälfte): 39,00 €
+- Gastgeschenk Franzi Likör (deine Hälfte): 8,98 €
+- Ohrheld Ohrstöpsel (persönlich): 60,00 €
+=> Dein persönlicher Kostenanteil bisher: 457,68 €
 
-💸 SCHULDEN-TRACKER (AKTUELLES SPLID NETTO-GUTHABEN):
-- Hostel Wien: Du hast 131,40 € gezahlt -> Henri schuldet dir 65,70 €
-- Hostel Bratislava: Henri hat 78,00 € gezahlt -> Du schuldest Henri 39,00 €
-- *(Tipp: Wenn du Franzi Likör 17,95 € in Splid einträgst, schuldet Henri dir +8,98 € mehr = 35,68 €)*
+💸 SCHULDEN-TRACKER (SPLID NETTO-SALDO INKL. LIKÖR):
+- Hostel Wien: Du hast 131,40 € gezahlt -> Henri schuldet dir +65,70 €
+- Hostel Bratislava: Henri hat 78,00 € gezahlt -> Du schuldest Henri -39,00 €
+- Franzi Likör: Du hast 17,95 € gezahlt -> Henri schuldet dir +8,98 €
 ================================================================================
-=> NETTO-STAND SPLID: HENRI SCHULDET DIR 26,70 € 🟢
+=> NETTO-STAND: HENRI SCHULDET DIR 35,68 € 🟢
 ================================================================================
 
 --------------------------------------------------------------------------------

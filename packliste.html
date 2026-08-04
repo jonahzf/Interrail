@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎒 Interrail Packliste – Druckversion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --border: #cbd5e1;
+            --bg-check: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--primary);
+            background: #f1f5f9;
+            padding: 30px 20px;
+            line-height: 1.4;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .header-sub {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .print-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+
+        .print-btn:hover { background: #1d4ed8; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .category {
+            background: var(--bg-check);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            break-inside: avoid;
+        }
+
+        .category-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .item-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #94a3b8;
+            border-radius: 4px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .item.done .checkbox {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .item.done .checkbox::after {
+            content: '✓';
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .item.done .text {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+
+        .note-box {
+            margin-top: 20px;
+            padding: 12px;
+            border: 1px dashed var(--border);
+            border-radius: 8px;
+            font-size: 12px;
+            color: #64748b;
+            text-align: center;
+        }
+
+        /* === PRINT STYLES === */
+        @media print {
+            body { background: white; padding: 0; }
+            .page { box-shadow: none; padding: 0; border-radius: 0; max-width: 100%; }
+            .print-btn { display: none !important; }
+            .category { border-color: #cbd5e1; background: #fff; }
+            .checkbox { border-color: #000; }
+            @page { margin: 1.2cm; size: A4 portrait; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="header">
+        <div>
+            <h1>🎒 Interrail Packliste (70L Rucksack)</h1>
+            <div class="header-sub">Du & Henri · Sommer 2026 · Druckversion A4 zum Abhaken</div>
+        </div>
+        <button class="print-btn" onclick="window.print()">🖨️ Drucken / Als PDF speichern</button>
+    </div>
+
+    <div class="grid">
+
+        <!-- DOKUMENTE -->
+        <div class="category">
+            <div class="category-title">📄 Dokumente & Finanzen</div>
+            <ul class="item-list">
+                <li class="item"><div class="checkbox"></div><span class="text">Personalausweis (im Portemonnaie)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Reisepass (Backup unten im Rucksack)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Interrail Pass (App + QR Screenshot)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Krankenkassenkarte / Auslandskrankenv.</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">2x Kreditkarten (Revolut/N26 getrennt)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Bargeld Euro (ca. 100–150 € kleine Scheine)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Studentenausweis</span></li>
+            </ul>
+        </div>
+
+        <!-- HYGIENE & GESUNDHEIT -->
+        <div class="category">
+            <div class="category-title">🧼 Hygiene & Gesundheit</div>
+            <ul class="item-list">
+                <li class="item"><div class="checkbox"></div><span class="text">Mikrofaser-Handtuch (schnelltrocknend)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Kulturbeutel zum Aufhängen</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Duschgel / Shampoo (100ml Flaschen)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Zahnbürste & Zahnpasta</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Sonnencreme & Mückenschutz</span></li>
+                <li class="item done"><div class="checkbox"></div><span class="text">Reiseapotheke aufgestockt (IBU, Vomex...)</span></li>
+                <li class="item done"><div class="checkbox"></div><span class="text">Schweden Erste-Hilfe-Set</span></li>
+                <li class="item done"><div class="checkbox"></div><span class="text">Ohrheld Ohrstöpsel (maßgefertigt)</span></li>
+            </ul>
+        </div>
+
+        <!-- KLEIDUNG -->
+        <div class="category">
+            <div class="category-title">👕 Kleidung (7–8 Tage + Waschen)</div>
+            <ul class="item-list">
+                <li class="item"><div class="checkbox"></div><span class="text">7x T-Shirts / Tanktops</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x Schickeres Shirt / Hemd (Ausgehen)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">2x Kurze Hosen / Shorts</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x–2x Badehose</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x Dünne lange Hose (Moscheen & Nächte)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x Regenjacke / Windbreaker (Shkodra)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x Pullover / Hoodie (Züge & Sarajevo)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">7x Unterwäsche</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">7x Socken (1-2x Wandersocken)</span></li>
+            </ul>
+        </div>
+
+        <!-- SCHUHE & GADGETS -->
+        <div class="category">
+            <div class="category-title">👟 Schuhe & Equipment</div>
+            <ul class="item-list">
+                <li class="item"><div class="checkbox"></div><span class="text">1x Bequeme Alltagssneaker</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x Feste Schuhe / Trailrunner (Profil)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">1x Adiletten / Badeschlappen</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Zahlenschloss (Hostel-Locker)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Oropax / Schlafmaske</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Tagesrucksack 15–20L</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Powerbank (10.000–20.000 mAh)</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Ladekabel + Mehrfachstecker</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Wäscheleine + Rei in der Tube</span></li>
+                <li class="item"><div class="checkbox"></div><span class="text">Trinkflasche (mind. 1 Liter)</span></li>
+                <li class="item done"><div class="checkbox"></div><span class="text">3D-Kontaktlinsen-Etui</span></li>
+                <li class="item done"><div class="checkbox"></div><span class="text">Gastgeschenk: Franzi Likör (Prag)</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="note-box">
+        💡 Tipp: Rucksack nur zu 60–70% füllen (11–13 kg max). Schwere Sachen nach unten nah an den Rücken packen!
+    </div>
+</div>
+
+</body>
+</html>

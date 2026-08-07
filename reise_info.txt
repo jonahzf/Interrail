@@ -35,22 +35,19 @@ REISETAGE-KALKULATION (10 verfügbar, 9 verplant, 1 Reserve):
 
 WICHTIG (Nachtzug-Regel):
 Der Nachtzug Innsbruck -> Hamburg fährt am 09.09. um 20:46 ab (nach 19:00!).
-Er zählt erst als Reisetag am 10.09. (Ankunftstag). Daher brauchen Verona -> Innsbruck
-und Innsbruck -> Hamburg 2 separate Reisetage (09.09. + 10.09.).
+Er zählt erst als Reisetag am 10.09. (Ankunftstag).
 
 --------------------------------------------------------------------------------
 3. ZUGVERBINDUNGEN
 --------------------------------------------------------------------------------
 #  Datum       Strecke                                 Zeiten          Dauer   Umst. Res.        Preis
 1  Mi, 05.08.  Hamburg Hbf -> Praha-Holesovice         08:34 -> 15:15  6h 41m  1     empfohlen   -
-2  Do, 07.08.  Praha-Holesovice -> Wien Hbf            Verbindung neu raussuchen
+2  Fr, 07.08.  Praha hl.n. -> Wien Hbf (genommen! ✅)  12:37 -> 16:49  4h 12m  0 (+30m Verspätung) -
 3  Do, 13.08.  Bratislava-Petrzalka -> Kelenföld       08:49 -> 11:02  2h 13m  1     optional    -
 4  Sa, 15.08.  Kőbánya-Kispest -> Beograd Centar       09:06 -> 15:19  6h 13m  2     erforderl.  ab 6 €
 5  Mi, 19.08.  Beograd Centar -> Bar (Montenegro)      09:45 -> 21:10  11h 25m 0     erforderl.  -
 6  Mi, 02.09.  Zagreb Glavni Kol. -> Ljubljana         08:40 -> 11:03  2h 23m  0     optional    -
-7  So, 06.09.  Trieste Centrale -> Verona Porta Nuova  09:39 -> 12:30  2h 51m  0     erforderl.  ab 15 €
-8  Mi, 09.09.  Verona Porta Nuova -> Innsbruck Hbf     07:50 -> 12:13  4h 23m  1     -           -
-9  Mi, 09.09.  Innsbruck Hbf -> Hamburg Hbf            20:46 -> 08:38  11h 52m 0     erforderl.  variabel
+7  Mi, 09.09.  Innsbruck Hbf -> Hamburg Hbf            20:46 -> 08:38  11h 52m 0     erforderl.  variabel
 
 HINWEIS Wien -> Bratislava:
 Per Regionalbahn (kein Interrail-Reisetag!). Fährt regelmäßig, dauert ~1h, kostet ca. 10-15 € p.P.
@@ -60,8 +57,8 @@ Per Regionalbahn (kein Interrail-Reisetag!). Fährt regelmäßig, dauert ~1h, ko
 --------------------------------------------------------------------------------
 Stadt             Ankunft        Abfahrt        Nächte  Status
 --------------------------------------------------------------------------------
-🇨🇿 Prag           05.08. (15:15) 07.08.         2       [OK] sicher (bei Eli)
-🇦🇹 Wien           07.08.         10.08. (Check) 3       [OK] gebucht (Hostel)
+🇨🇿 Prag           05.08. (15:15) 07.08. (12:37) 2       [OK] sicher (bei Eli)
+🇦🇹 Wien           07.08. (17:20) 10.08. (Check) 3       [OK] gebucht (Hostel)
 🇸🇰 Bratislava     10.08.         12.08. (Check) 2       [OK] gebucht (Hostel)
 🇭🇺 Budapest       12.08.         15.08. (09:06) ~3      vorläufig
 🇷🇸 Belgrad        15.08. (15:19) 19.08. (09:45) ~4      vorläufig
@@ -72,10 +69,8 @@ Stadt             Ankunft        Abfahrt        Nächte  Status
 🇭🇷 Dubrovnik      ~24.08.        ~26.08.        2       vorläufig
 🇧🇦 Sarajevo       ~26.08.        ~30.08.        4       vorläufig
 🇭🇷 Zagreb         ~30.08.        02.09. (08:40) 3       vorläufig
-🇸🇮 Ljubljana      02.09. (11:03) ~06.09.        4       vorläufig
-🇮🇹 Trieste        ~05./06.09.    06.09. (09:39) ~1      vorläufig
-🇮🇹 Verona         06.09. (12:30) 09.09. (07:50) ~3      vorläufig
-🇦🇹 Innsbruck      09.09. (12:13) 09.09. (20:46) Durchr.  vorläufig
+🇸🇮 Ljubljana      02.09. (11:03) 09.09.         7       vorläufig
+🇦🇹 Innsbruck      09.09.         09.09. (20:46) Durchr.  vorläufig
 🇩🇪 Hamburg        10.09. (08:38) -              Zuhause!
 
 BALKAN-BUS-ROUTE (19.08. - 02.09.):

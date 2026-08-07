@@ -568,7 +568,7 @@
         }
     </style>
 </head>
-<body id="app-body" data-version="2026-08-04T12:46:00">
+<body id="app-body" data-version="2026-08-07T13:55:00">
 <div class="container">
 
     <!-- HERO -->
@@ -591,8 +591,8 @@
                 <span class="hero-stat-label">Länder</span>
             </div>
             <div class="hero-stat">
-                <span class="hero-stat-value" id="countdown"></span>
-                <span class="hero-stat-label">Tage noch</span>
+                <span class="hero-stat-value" id="current-day">Tag 3</span>
+                <span class="hero-stat-label">von 36</span>
             </div>
         </div>
     </div>
@@ -650,17 +650,17 @@
         </div>
         <div class="card" style="overflow-x:auto;padding:12px">
             <table class="train-table">
-                <thead><tr><th>#</th><th>Datum</th><th>Strecke</th><th>Zeiten</th><th>Dauer</th><th>Reservierung</th></tr></thead>
+                <thead><tr><th>#</th><th>Datum</th><th>Strecke</th><th>Zeiten</th><th>Dauer</th></tr></thead>
                 <tbody>
-                    <tr><td>1</td><td>Mi, 05.08.</td><td class="train-route">Hamburg Hbf → Praha-Holesovice</td><td class="train-time">08:34 → 15:15</td><td>6h 41m</td><td><span class="badge badge-yellow">empfohlen</span></td></tr>
-                    <tr><td>2</td><td>Fr, 07.08.</td><td class="train-route">Praha hl.n. → Wien Hbf</td><td class="train-time">10:44 → 15:00</td><td>4h 16m</td><td><span class="badge badge-blue">optional (RJ 77)</span></td></tr>
-                    <tr><td>3</td><td>Mi, 12.08.</td><td class="train-route">Bratislava → Budapest-Kelenföld</td><td class="train-time">08:49 → 11:02</td><td>2h 13m</td><td><span class="badge badge-blue">optional</span></td></tr>
-                    <tr><td>4</td><td>Sa, 15.08.</td><td class="train-route">Budapest → Beograd Centar</td><td class="train-time">09:06 → 15:19</td><td>6h 13m</td><td><span class="badge badge-red">erforderlich · ab 6 €</span></td></tr>
-                    <tr><td>5</td><td>Mi, 19.08.</td><td class="train-route">Beograd → Bar (Montenegro)</td><td class="train-time">09:45 → 21:10</td><td>11h 25m</td><td><span class="badge badge-red">erforderlich</span></td></tr>
-                    <tr><td>6</td><td>Mi, 02.09.</td><td class="train-route">Zagreb → Ljubljana</td><td class="train-time">08:40 → 11:03</td><td>2h 23m</td><td><span class="badge badge-blue">optional</span></td></tr>
-                    <tr><td>7</td><td>So, 06.09.</td><td class="train-route">Trieste → Verona Porta Nuova</td><td class="train-time">09:39 → 12:30</td><td>2h 51m</td><td><span class="badge badge-red">erforderlich · ab 15 €</span></td></tr>
-                    <tr><td>8</td><td>Mi, 09.09.</td><td class="train-route">Verona → Innsbruck Hbf</td><td class="train-time">07:50 → 12:13</td><td>4h 23m</td><td>–</td></tr>
-                    <tr><td>9</td><td>Mi, 09.09.</td><td class="train-route">Innsbruck Hbf → Hamburg Hbf 🌙</td><td class="train-time">20:46 → 08:38+1</td><td>11h 52m</td><td><span class="badge badge-red">erforderlich · variabel</span></td></tr>
+                    <tr><td>1</td><td>Mi, 05.08.</td><td class="train-route">Hamburg Hbf → Praha-Holesovice</td><td class="train-time">08:34 → 15:15</td><td>6h 41m</td></tr>
+                    <tr><td>2</td><td>Fr, 07.08.</td><td class="train-route">Praha hl.n. → Wien Hbf</td><td class="train-time">14:44 → 19:00</td><td>4h 16m</td></tr>
+                    <tr><td>3</td><td>Mi, 12.08.</td><td class="train-route">Bratislava → Budapest-Kelenföld</td><td class="train-time">08:49 → 11:02</td><td>2h 13m</td></tr>
+                    <tr><td>4</td><td>Sa, 15.08.</td><td class="train-route">Budapest → Beograd Centar</td><td class="train-time">09:06 → 15:19</td><td>6h 13m</td></tr>
+                    <tr><td>5</td><td>Mi, 19.08.</td><td class="train-route">Beograd → Bar (Montenegro)</td><td class="train-time">09:45 → 21:10</td><td>11h 25m</td></tr>
+                    <tr><td>6</td><td>Mi, 02.09.</td><td class="train-route">Zagreb → Ljubljana</td><td class="train-time">08:40 → 11:03</td><td>2h 23m</td></tr>
+                    <tr><td>7</td><td>So, 06.09.</td><td class="train-route">Trieste → Verona Porta Nuova</td><td class="train-time">09:39 → 12:30</td><td>2h 51m</td></tr>
+                    <tr><td>8</td><td>Mi, 09.09.</td><td class="train-route">Verona → Innsbruck Hbf</td><td class="train-time">07:50 → 12:13</td><td>4h 23m</td></tr>
+                    <tr><td>9</td><td>Mi, 09.09.</td><td class="train-route">Innsbruck Hbf → Hamburg Hbf 🌙</td><td class="train-time">20:46 → 08:38+1</td><td>11h 52m</td></tr>
                 </tbody>
             </table>
         </div>
@@ -698,181 +698,28 @@
         </div>
     </div>
 
-    <!-- BALKAN BUS-ROUTE -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-icon" style="background:rgba(249,115,22,0.15)">🚌</div>
-            <div>
-                <div class="section-title">Balkan Bus-Route</div>
-                <div class="section-subtitle">19.08. – 02.09. · 14 Tage · alles per Bus</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="balkan-route">
-                <div class="balkan-stop"><span class="balkan-flag">🇲🇪</span><span class="balkan-city">Bar</span></div>
-                <span class="balkan-arrow">→</span>
-                <div class="balkan-stop"><span class="balkan-flag">🇦🇱</span><span class="balkan-city">Shkodra</span></div>
-                <span class="balkan-arrow">→</span>
-                <div class="balkan-stop"><span class="balkan-flag">🇲🇪</span><span class="balkan-city">Ulcinj</span></div>
-                <span class="balkan-arrow">→</span>
-                <div class="balkan-stop"><span class="balkan-flag">🇲🇪</span><span class="balkan-city">Bar</span></div>
-                <span class="balkan-arrow">→</span>
-                <div class="balkan-stop"><span class="balkan-flag">🇭🇷</span><span class="balkan-city">Dubrovnik</span></div>
-                <span class="balkan-arrow">→</span>
-                <div class="balkan-stop"><span class="balkan-flag">🇧🇦</span><span class="balkan-city">Sarajevo</span></div>
-                <span class="balkan-arrow">→</span>
-                <div class="balkan-stop"><span class="balkan-flag">🇭🇷</span><span class="balkan-city">Zagreb</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- BUDGET -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-icon" style="background:rgba(16,185,129,0.15)">💰</div>
-            <div>
-                <div class="section-title">Budget & Finanzen</div>
-                <div class="section-subtitle">Synchron mit Splid-App („Interrail")</div>
-            </div>
-        </div>
-        <div class="budget-grid">
-            <div class="budget-card">
-                <div class="budget-card-title">Dein Kostenanteil bisher</div>
-                <div class="budget-amount" style="color:var(--accent-emerald)">457,68 €</div>
-                <div class="budget-items">
-                    <div class="budget-item"><span>Interrail-Pass</span><span class="budget-item-amount">284,00 €</span></div>
-                    <div class="budget-item"><span>Hostel Wien (deine Hälfte)</span><span class="budget-item-amount">65,70 €</span></div>
-                    <div class="budget-item"><span>Hostel Bratislava (deine Hälfte)</span><span class="budget-item-amount">39,00 €</span></div>
-                    <div class="budget-item"><span>Gastgeschenk Likör (deine Hälfte)</span><span class="budget-item-amount">8,98 €</span></div>
-                    <div class="budget-item"><span>Ohrheld Ohrstöpsel</span><span class="budget-item-amount">60,00 €</span></div>
-                </div>
-            </div>
-            <div class="budget-card">
-                <div class="budget-card-title">Geteilte Gesamtausgaben (beide)</div>
-                <div class="budget-amount" style="color:var(--accent-blue)">795,35 €</div>
-                <div class="budget-items">
-                    <div class="budget-item"><span>2× Interrail-Pass</span><span class="budget-item-amount">568,00 €</span></div>
-                    <div class="budget-item"><span>Hostel Wien (Du gezahlt)</span><span class="budget-item-amount">131,40 €</span></div>
-                    <div class="budget-item"><span>Hostel Bratislava (Henri gezahlt)</span><span class="budget-item-amount">78,00 €</span></div>
-                    <div class="budget-item"><span>Gastgeschenk Likör (Du gezahlt)</span><span class="budget-item-amount">17,95 €</span></div>
-                </div>
-            </div>
-        </div>
-        <div class="budget-card debt-card" style="margin-top:16px">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-                <div>
-                    <div class="budget-card-title">💸 Schulden-Tracker (Splid Netto-Saldo)</div>
-                    <div style="font-size:14px;color:var(--text-secondary)">Du hast Wien (131,40 €) & Likör (17,95 €) gezahlt · Henri hat Bratislava (78,00 €) gezahlt</div>
-                    <div style="font-size:12px;color:var(--accent-emerald);margin-top:4px;font-weight:600">🟢 Henri schuldet dir netto 35,68 €</div>
-                </div>
-                <div class="budget-amount debt-amount" style="color:var(--accent-emerald)">+35,68 €</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- UNTERKÜNFTE -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-icon" style="background:rgba(245,158,11,0.15)">🏨</div>
-            <div>
-                <div class="section-title">Unterkünfte</div>
-                <div class="section-subtitle">3 gesichert · 11 offen</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="accom-card">
-                <div class="accom-icon booked">🇸🇰</div>
-                <div class="accom-details">
-                    <div class="accom-name">Hostelworld Buchung · Bratislava</div>
-                    <div class="accom-meta">Buchungsnummer: 10394-578698657</div>
-                    <div class="accom-meta">Mo 10.08. → Mi 12.08. · 2 Nächte · 2× Bett im 10-Bett Mixed Dorm</div>
-                    <div class="accom-meta" style="margin-top:4px;color:var(--text-muted)">💳 11,70 € Anzahlung online bezahlt · 80,30 € vor Ort im Hostel</div>
-                </div>
-                <div class="accom-price" style="color:var(--accent-blue)">46,00 € p.P.</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="accom-card">
-                <div class="accom-icon booked">🇦🇹</div>
-                <div class="accom-details">
-                    <div class="accom-name">Westend City Hostel Wien</div>
-                    <div class="accom-meta">Fügergasse 3, 1060 Wien · Buchung: 1060-20-22177</div>
-                    <div class="accom-meta">Fr 07.08. → Mo 10.08. · 3 Nächte · 2× Bett im 8-Bett-Zimmer</div>
-                    <div class="accom-meta" style="margin-top:4px;color:var(--text-muted)">📞 +43/1/597 67 29 · ✉️ info@westendhostel.at</div>
-                </div>
-                <div class="accom-price" style="color:var(--accent-blue)">32,85 € p.P.</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="accom-card">
-                <div class="accom-icon free">🇨🇿</div>
-                <div class="accom-details">
-                    <div class="accom-name">Bei Eli · Prag</div>
-                    <div class="accom-meta">CISV-Freundin von Henri · 05.08. → 07.08. · 2 Nächte</div>
-                </div>
-                <div class="accom-price" style="color:var(--accent-emerald)">Gratis 🎉</div>
-            </div>
-        </div>
-        <div style="margin-top:16px">
-            <div style="font-weight:700;font-size:15px;margin-bottom:12px;color:var(--text-muted)">🔲 Noch offen</div>
-            <div class="accom-open-grid">
-                <div class="accom-open-item"><div class="accom-open-city">🇭🇺 Budapest</div><div class="accom-open-dates">12.–15.08. · 3N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇷🇸 Belgrad</div><div class="accom-open-dates">15.–19.08. · 4N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇲🇪 Bar</div><div class="accom-open-dates">19.–20.08. · 1N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇦🇱 Shkodra</div><div class="accom-open-dates">~20.–22.08. · 2N 🥾</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇲🇪 Ulcinj</div><div class="accom-open-dates">~22.–23.08. · 1N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇲🇪 Bar 2×</div><div class="accom-open-dates">~23.–24.08. · 1N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇭🇷 Dubrovnik</div><div class="accom-open-dates">~24.–26.08. · 2N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇧🇦 Sarajevo</div><div class="accom-open-dates">~26.–30.08. · 4N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇭🇷 Zagreb</div><div class="accom-open-dates">~30.08.–02.09. · 3N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇸🇮 Ljubljana</div><div class="accom-open-dates">02.–06.09. · 4N</div></div>
-                <div class="accom-open-item"><div class="accom-open-city">🇮🇹 Verona</div><div class="accom-open-dates">06.–09.09. · 3N</div></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- TODO -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-icon" style="background:rgba(244,63,94,0.15)">📋</div>
-            <div>
-                <div class="section-title">To-Do vor Reisebeginn</div>
-            </div>
-        </div>
-        <div class="todo-item done"><div class="todo-check done"></div><span>🎁 Gastgeschenk für Eli + ihre Eltern besorgen (Franzi Likör gekauft ✅)</span></div>
-        <div class="todo-item done"><div class="todo-check done"></div><span>🖨️ 3D-Drucken: Kontaktlinsen-Etui ✅</span></div>
-        <div class="todo-item done"><div class="todo-check done"></div><span>📦 Amazon Prime Bestellung erledigt ✅</span></div>
-        <div class="todo-item done"><div class="todo-check done"></div><span>Zugverbindung Prag → Wien für den 07.08. rausgesucht (10:44 → 15:00 Railjet 77 ✅)</span></div>
-        <div class="todo-item"><div class="todo-check"></div><span>Sitzplatzreservierungen buchen (Budapest→Belgrad, Belgrad→Bar, Trieste→Verona, Nachtzug Innsbruck→Hamburg)</span></div>
-        <div class="todo-item done"><div class="todo-check done"></div><span>🎧 Ohrheld Ohrstöpsel bestellen (~60 €)</span></div>
-    </div>
-
-    <!-- PERSÖNLICHES -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-icon" style="background:rgba(139,92,246,0.15)">👤</div>
-            <div>
-                <div class="section-title">Persönliches</div>
-            </div>
-        </div>
-        <div class="card" style="display:flex;gap:24px;flex-wrap:wrap">
-            <div>🍎 Apple-Nutzer (iPhone, MacBook)</div>
-            <div>🎒 Gregory 65L + Packing Cubes</div>
-        </div>
-    </div>
-
 </div>
 
 <script>
-// Countdown
-const departure = new Date('2026-08-05T08:34:00');
-function updateCountdown() {
+// Live Current Travel Day Calculation
+const tripStart = new Date('2026-08-05T00:00:00');
+function updateCurrentDay() {
     const now = new Date();
-    const diff = Math.ceil((departure - now) / (1000 * 60 * 60 * 24));
-    document.getElementById('countdown').textContent = diff > 0 ? diff : '🚀';
+    const diffTime = now - tripStart;
+    const dayNum = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+    const el = document.getElementById('current-day');
+    if (el) {
+        if (dayNum < 1) {
+            el.textContent = 'Tag 1';
+        } else if (dayNum > 36) {
+            el.textContent = 'Tag 36';
+        } else {
+            el.textContent = 'Tag ' + dayNum;
+        }
+    }
 }
-updateCountdown();
-setInterval(updateCountdown, 60000);
+updateCurrentDay();
+setInterval(updateCurrentDay, 3600000);
 
 // BULLETPROOF LIVE AUTO-UPDATER FOR iOS WEB APP
 function checkLiveServerUpdate() {

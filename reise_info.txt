@@ -42,12 +42,13 @@ Er zählt erst als Reisetag am 10.09. (Ankunftstag).
 --------------------------------------------------------------------------------
 #  Datum       Strecke                                 Zeiten          Dauer   Umst. Res.        Preis
 1  Mi, 05.08.  Hamburg Hbf -> Praha-Holesovice         08:34 -> 15:15  6h 41m  1     empfohlen   -
-2  Fr, 07.08.  Praha hl.n. -> Wien Hbf (genommen! ✅)  12:37 -> 16:49  4h 12m  0 (+30m Verspätung) -
+2  Fr, 07.08.  Praha hl.n. -> Wien Hbf                 12:37 -> 16:49  4h 12m  0 (+30m Verspätung) -
 3  Do, 13.08.  Bratislava-Petrzalka -> Kelenföld       08:49 -> 11:02  2h 13m  1     optional    -
 4  Sa, 15.08.  Kőbánya-Kispest -> Beograd Centar       09:06 -> 15:19  6h 13m  2     erforderl.  ab 6 €
 5  Mi, 19.08.  Beograd Centar -> Bar (Montenegro)      09:45 -> 21:10  11h 25m 0     erforderl.  -
 6  Mi, 02.09.  Zagreb Glavni Kol. -> Ljubljana         08:40 -> 11:03  2h 23m  0     optional    -
-7  Mi, 09.09.  Innsbruck Hbf -> Hamburg Hbf            20:46 -> 08:38  11h 52m 0     erforderl.  variabel
+7  Mi, 09.09.  Ljubljana -> Innsbruck Hbf              05:05 -> 09:48  4h 43m  1     optional    -
+8  Mi, 09.09.  Innsbruck Hbf -> Hamburg Hbf            20:46 -> 08:38  11h 52m 0     erforderl.  variabel
 
 HINWEIS Wien -> Bratislava:
 Per Regionalbahn (kein Interrail-Reisetag!). Fährt regelmäßig, dauert ~1h, kostet ca. 10-15 € p.P.
